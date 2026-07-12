@@ -13,8 +13,8 @@ cask "halo" do
 
   caveats <<~EOS
     Halo is a personal open-source build and is not notarized by Apple.
-    If macOS blocks the first launch, install with:
-      brew install --cask --no-quarantine spador/halo/halo
+    If macOS blocks the first launch, clear the quarantine flag:
+      xattr -dr com.apple.quarantine /Applications/Halo.app
     or approve it under System Settings > Privacy & Security > Open Anyway.
 
     On first launch, grant Accessibility access to enable the
